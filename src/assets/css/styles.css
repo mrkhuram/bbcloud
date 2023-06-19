@@ -1,0 +1,61 @@
+/** IMPORTS CSS */
+@import "./variables.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/** CUSTOM CSS FOR WHOLE APP */
+
+body {
+  font-family: var(--font-family);
+  color: var(--text-color);
+  background-color: var(--surface-ground);
+}
+
+.bg-secondary {
+  background-color: var(--secondary);
+}
+
+.layout-main {
+  flex: 1 1 auto;
+}
+
+.tour_root {
+  background-image: url(https://cdn.shopify.com/s/files/1/0086/9315/3852/t/2/assets/2017_1130_2506_7562.jpeg?v=96993181458773246931556290600);
+}
+.music_root {
+  background-image: url(https://cdn.shopify.com/s/files/1/0086/9315/3852/t/2/assets/2017_1130_2506_7561.jpeg?v=75938640607992490421556123985);
+}
+.news_root {
+  background-color: #202020;
+}
+
+.text-shadow-theme {
+  text-shadow: 3px 3px 0 #c76037;
+}
+.text-yellow-theme {
+  color: #dbb52f;
+}
+.border-yellow-theme {
+  border-color: #dbb52f;
+}
+
+.bg-yellow {
+  background-color: #dbb52f;
+}
+.underline-color:hover {
+  text-decoration-color: #dbb52f;
+}
+
+.btn-hover:hover {
+  background-color: #c76037;
+  color: white;
+}
+.bg-news{
+  background-color: rgba(77,46,43,.85);
+}
+/** MEDIA QUERY FOR SMALL DEVICES*/
+
+@media (max-width: 991px) {
+}

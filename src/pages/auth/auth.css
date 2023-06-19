@@ -1,0 +1,11 @@
+.auth-container {
+    width: 500px;
+}
+
+/** MEDIA QUERIES */
+
+@media screen and (max-width: 575px) {
+    .auth-container {
+        width: 90%;
+    }
+}
