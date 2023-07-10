@@ -8,6 +8,7 @@ import { adminRoutes } from "./adminRoutes";
 import DashboardPage from "../pages/dashboard_page/DashboardPage";
 import Tour from "../components/Tour";
 import News from "../components/News";
+import Store from "../components/Store";
 
 function ApplicationRoutes() {
   // const currentUser = useSelector((state) => {
@@ -32,6 +33,7 @@ function ApplicationRoutes() {
         <Route path='/' element={<DashboardPage />} />
         <Route path='/tour' element={<Tour />} />
         <Route path='/news' element={<News />} />
+        <Route path="/store" element={<Store/>}/>
       </Route>
 
       {/* {currentUser == userType.admin && (
