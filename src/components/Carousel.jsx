@@ -13,12 +13,12 @@ const CarouselComp = () => {
     >
       <div>
         <Link to='/store'>
-          <img src='https://cdn.shopify.com/s/files/1/0086/9315/3852/t/2/assets/slide-4-image.jpg?v=12992332416654516371646949875' />
-        </Link>
+          <img src='https://cdn.shopify.com/s/files/1/0086/9315/3852/t/2/assets/slide-4-image.jpg?v=12992332416654516371646949875' alt="carousel 1" />
+        </Link>      
       </div>
       <div>
         <Link to='/store'>
-          <img src='https://cdn.shopify.com/s/files/1/0086/9315/3852/t/2/assets/slide-5-image.jpg?v=62087092770412964211643129851' />
+          <img src='https://cdn.shopify.com/s/files/1/0086/9315/3852/t/2/assets/slide-5-image.jpg?v=62087092770412964211643129851' alt="carousel 2"/>
         </Link>
       </div>
     </Carousel>

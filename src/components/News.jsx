@@ -39,6 +39,8 @@ let News = () => {
                 </div>
               );
             }
+            return false
+
           })}
         </div>
         <div className='flex flex-col'>

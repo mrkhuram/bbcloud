@@ -1,10 +1,10 @@
 import React from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
-import { ProtectedRoute } from "./ProtectedRoute";
+// import { ProtectedRoute } from "./ProtectedRoute";
 import DashboardContainer from "../components/layout/dashboard_container/DashboardContainer";
 
 // Routes
-import { adminRoutes } from "./adminRoutes";
+// import { adminRoutes } from "./adminRoutes";
 import DashboardPage from "../pages/dashboard_page/DashboardPage";
 import Tour from "../components/Tour";
 import News from "../components/News";

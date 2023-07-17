@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import CTAButton from "./CtaButton";
 import YouTube from "react-youtube";
 import { Spotify } from "react-spotify-embed";

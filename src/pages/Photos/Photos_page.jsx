@@ -1,7 +1,3 @@
-import { useState } from "react";
-import Music from "../../components/Music";
-import YouTube from "react-youtube";
-import { Spotify } from "react-spotify-embed";
 
 const DashboardPage = () => {
   return (

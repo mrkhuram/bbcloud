@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import CTAButton from "./CtaButton";
+
 let Tour = () => {
   return (
     <div className='tour_root py-32 '>
@@ -35,6 +36,7 @@ let Tour = () => {
                 </div>
               );
             }
+            return false
           })}
 
           <div className='text-center pt-24'>

@@ -1,7 +1,5 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
 
-const Footer = ({}) => {
+const Footer = () => {
   return (
     <div className='footer_root bg-black py-10 w-full'>
       <div className='w-[97%] xl:w-[70%] flex flex-row mx-auto h-56'>
