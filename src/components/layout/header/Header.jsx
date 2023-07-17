@@ -75,8 +75,8 @@ const Header = ({ sidebarHandler }) => {
             { title: "home", path: "/" },
             { title: "tour", path: "/tour" },
             { title: "news", path: "/news" },
-            { title: "music", path: "/news" },
-            { title: "photos", path: "/news" },
+            { title: "music", path: "/music" },
+            { title: "photos", path: "/photos" },
             { title: "videos", path: "/news" },
             { title: "about", path: "/news" },
             { title: "store", path: "/news" }
