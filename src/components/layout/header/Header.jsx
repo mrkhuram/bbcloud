@@ -79,7 +79,7 @@ const Header = ({ sidebarHandler }) => {
             { title: "photos", path: "/photos" },
             { title: "videos", path: "/news" },
             { title: "about", path: "/news" },
-            { title: "store", path: "/news" }
+            { title: "store", path: "/store" }
           ].map((item, ind) => {
             return (
               <li
