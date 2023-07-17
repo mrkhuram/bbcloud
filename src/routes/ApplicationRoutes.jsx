@@ -1,14 +1,15 @@
 import React from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
-import { ProtectedRoute } from "./ProtectedRoute";
+// import { ProtectedRoute } from "./ProtectedRoute";
 import DashboardContainer from "../components/layout/dashboard_container/DashboardContainer";
 
 // Routes
-import { adminRoutes } from "./adminRoutes";
+// import { adminRoutes } from "./adminRoutes";
 import DashboardPage from "../pages/dashboard_page/DashboardPage";
 import Tour from "../components/Tour";
 import News from "../components/News";
-import Store from "../components/Store";
+import Store from "../pages/store/Store";
+import ProductPage from "../pages/store/product";
 
 function ApplicationRoutes() {
   // const currentUser = useSelector((state) => {
@@ -29,11 +30,12 @@ function ApplicationRoutes() {
         <Route path='/verify-otp' element={<VerifyOTP />} />
         <Route path='/set-new-password' element={<SetNewPassword />} />
       </Route> */}
-      <Route path='/' element={<DashboardContainer />}>
-        <Route path='/' element={<DashboardPage />} />
-        <Route path='/tour' element={<Tour />} />
-        <Route path='/news' element={<News />} />
-        <Route path="/store" element={<Store/>}/>
+      <Route path="/" element={<DashboardContainer />}>
+        <Route path="/" element={<DashboardPage />} />
+        <Route path="/tour" element={<Tour />} />
+        <Route path="/news" element={<News />} />
+        <Route path="/store" element={<Store />} />
+        <Route path="/store/:slug" element={<ProductPage />} />
       </Route>
 
       {/* {currentUser == userType.admin && (
@@ -52,7 +54,7 @@ function ApplicationRoutes() {
                 </Route>
             )} */}
 
-      <Route path='*' element={<Navigate to='/' />} />
+      <Route path="*" element={<Navigate to="/" />} />
     </Routes>
   );
 }
