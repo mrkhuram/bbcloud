@@ -2,7 +2,6 @@ import CarouselComp from "../../components/Carousel";
 import Tour from "../../components/Tour";
 import News from "../../components/News";
 import Music from "../../components/Music";
-import Store from "../../components/Store";
 const DashboardPage = () => {
   return (
     <>
@@ -10,7 +9,6 @@ const DashboardPage = () => {
       <Tour />
       <News />
       <Music />
-      <Store/>
     </>
   );
 };

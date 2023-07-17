@@ -11,6 +11,7 @@ import News from "../components/News";
 import Music from "../pages/Music/Music_page";
 import PhotosPage from "../pages/Photos/Photos_page";
 import Store from "../components/Store";
+import Videos from "../pages/Videos/Videos";
 
 function ApplicationRoutes() {
   // const currentUser = useSelector((state) => {
@@ -31,13 +32,14 @@ function ApplicationRoutes() {
         <Route path='/verify-otp' element={<VerifyOTP />} />
         <Route path='/set-new-password' element={<SetNewPassword />} />
       </Route> */}
-      <Route path='/' element={<DashboardContainer />}>
-        <Route path='/' element={<DashboardPage />} />
-        <Route path='/tour' element={<Tour />} />
-        <Route path='/news' element={<News />} />
-        <Route path='/music' element={<Music />} />
-        <Route path='/photos' element={<PhotosPage />} />
-        <Route path="/store" element={<Store/>}/>
+      <Route path="/" element={<DashboardContainer />}>
+        <Route path="/" element={<DashboardPage />} />
+        <Route path="/tour" element={<Tour />} />
+        <Route path="/news" element={<News />} />
+        <Route path="/music" element={<Music />} />
+        <Route path="/photos" element={<PhotosPage />} />
+        <Route path="/videos" element={<Videos />} />
+        <Route path="/store" element={<Store />} />
       </Route>
 
       {/* {currentUser == userType.admin && (
@@ -56,7 +58,7 @@ function ApplicationRoutes() {
                 </Route>
             )} */}
 
-      <Route path='*' element={<Navigate to='/' />} />
+      <Route path="*" element={<Navigate to="/" />} />
     </Routes>
   );
 }

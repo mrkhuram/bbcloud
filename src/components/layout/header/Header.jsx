@@ -68,7 +68,7 @@ const Header = () => {
             { title: "news", path: "/news" },
             { title: "music", path: "/music" },
             { title: "photos", path: "/photos" },
-            { title: "videos", path: "/news" },
+            { title: "videos", path: "/videos" },
             { title: "about", path: "/news" },
             { title: "store", path: "/store" }
           ].map((item, ind) => {
