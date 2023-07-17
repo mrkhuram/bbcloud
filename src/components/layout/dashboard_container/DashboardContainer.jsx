@@ -6,7 +6,7 @@ import Footer from "../footer/Footer";
 
 function DashboardContainer() {
   return (
-    <div className={`w-screen`}>
+    <div>
       <Header />
       <div className="layout-mask"></div>
       <div className="">
