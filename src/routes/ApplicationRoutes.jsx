@@ -8,9 +8,10 @@ import DashboardContainer from "../components/layout/dashboard_container/Dashboa
 import DashboardPage from "../pages/dashboard_page/DashboardPage";
 import Tour from "../components/Tour";
 import News from "../components/News";
+import Store from "../pages/store/Store";
+import ProductPage from "../pages/store/product";
 import Music from "../pages/Music/Music_page";
 import PhotosPage from "../pages/Photos/Photos_page";
-import Store from "../components/Store";
 import Videos from "../pages/Videos/Videos";
 
 function ApplicationRoutes() {
@@ -36,6 +37,8 @@ function ApplicationRoutes() {
         <Route path="/" element={<DashboardPage />} />
         <Route path="/tour" element={<Tour />} />
         <Route path="/news" element={<News />} />
+        <Route path="/store" element={<Store />} />
+        <Route path="/store/:slug" element={<ProductPage />} />
         <Route path="/music" element={<Music />} />
         <Route path="/photos" element={<PhotosPage />} />
         <Route path="/videos" element={<Videos />} />
