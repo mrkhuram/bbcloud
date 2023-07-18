@@ -1,10 +1,6 @@
 import React from "react";
 import "./header.css";
-import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import { useState } from "react";
-import Notifications from "../../notifications/Notifications";
-import { logout } from "../../../redux/userSlice";
 import images from "../../../assets/images/images";
 import { RiFacebookCircleLine } from "react-icons/ri";
 import { BsInstagram } from "react-icons/bs";
@@ -14,12 +10,7 @@ import {
 } from "react-icons/ti";
 import joinClasses from "../../../helpers/joinClasses";
 
-const Header = ({ sidebarHandler }) => {
-  const [menuMobile, setMenuMobile] = useState(false);
-  const [notificationPopup, setNotificationPopup] = useState(false);
-
-  const dispatch = useDispatch();
-  // const { currentUser } = useSelector((state) => state.user);
+const Header = () => {
 
   return (
     <header className={headerTop}>
@@ -75,9 +66,9 @@ const Header = ({ sidebarHandler }) => {
             { title: "home", path: "/" },
             { title: "tour", path: "/tour" },
             { title: "news", path: "/news" },
-            { title: "music", path: "/news" },
-            { title: "photos", path: "/news" },
-            { title: "videos", path: "/news" },
+            { title: "music", path: "/music" },
+            { title: "photos", path: "/photos" },
+            { title: "videos", path: "/videos" },
             { title: "about", path: "/news" },
             { title: "store", path: "/store" }
           ].map((item, ind) => {

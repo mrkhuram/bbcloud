@@ -10,6 +10,9 @@ import Tour from "../components/Tour";
 import News from "../components/News";
 import Store from "../pages/store/Store";
 import ProductPage from "../pages/store/product";
+import Music from "../pages/Music/Music_page";
+import PhotosPage from "../pages/Photos/Photos_page";
+import Videos from "../pages/Videos/Videos";
 
 function ApplicationRoutes() {
   // const currentUser = useSelector((state) => {
@@ -36,6 +39,10 @@ function ApplicationRoutes() {
         <Route path="/news" element={<News />} />
         <Route path="/store" element={<Store />} />
         <Route path="/store/:slug" element={<ProductPage />} />
+        <Route path="/music" element={<Music />} />
+        <Route path="/photos" element={<PhotosPage />} />
+        <Route path="/videos" element={<Videos />} />
+        <Route path="/store" element={<Store />} />
       </Route>
 
       {/* {currentUser == userType.admin && (
