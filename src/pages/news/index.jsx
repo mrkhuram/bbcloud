@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import CTAButton from "../../components/CtaButton";
 import PageHeading from "../../components/PageHeading";
+import { newsList } from "../../assets/data/news";
+
 let News = () => {
   return (
     <div className="news_root py-32 ">
@@ -14,11 +16,12 @@ let News = () => {
           {newsList.map(({ date, title, path, img, text }, ind) => {
             if (ind < 5) {
               return (
-                <div className="item w-[95%] xl:w-[70%] flex bg-news p-4 mb-8">
+                <div
+                  className="item w-[95%] xl:w-[70%] flex bg-news p-4 mb-8"
+                  key={ind}
+                >
                   <div className="w-6/12">
-                    <Link to="/">
-                      <img src={img} alt="" />
-                    </Link>
+                    <img src={img} alt="" />
                   </div>
                   <div className="w-6/12 flex flex-col pl-5">
                     <div className="flex flex-row justify-between">
@@ -54,131 +57,3 @@ let News = () => {
 };
 
 export default News;
-
-const newsList = [
-  {
-    title: "The 2nd Annual American Bad Ass Comedy Jam was a huge success!",
-    path: "Lincoln, CA",
-    date: "May 12, 2023",
-    img: "https://cdn.shopify.com/s/files/1/0086/9315/3852/articles/Group_Photo_No_Bird_smaller.jpg?v=1683923410",
-    text: ` Thank you to everyone who performed, organized, and attended The
-    2nd Annual American Bad Ass Comedy Jam at The Ryman here in
-    Nashville! We raised just over $87,000 dollars for the Kid Rock
-    Foundation. Every dime of that will be split between those
-    affected by the Covenant school shooting in Nashville and the
-    soldier's families of the recent blackhawk helicopters that went
-    down out of Ft. Campbell. If anyone else would like to donate,
-    the links are below. God bless. -Kid Rock Caring for Covenant
-    Fund https://www.cfmt.org/.../support-survivors-of-the.../ Fort
-    Campbell Historical Foundation (The Carl Ferrazza Fund)
-    https://fortcampbell.com`,
-  },
-
-  {
-    title: "The 2nd Annual American Bad Ass Comedy Jam was a huge success!",
-    path: "Lincoln, CA",
-    date: "May 12, 2023",
-    img: "https://cdn.shopify.com/s/files/1/0086/9315/3852/articles/Group_Photo_No_Bird_smaller.jpg?v=1683923410",
-    text: ` Thank you to everyone who performed, organized, and attended The
-    2nd Annual American Bad Ass Comedy Jam at The Ryman here in
-    Nashville! We raised just over $87,000 dollars for the Kid Rock
-    Foundation. Every dime of that will be split between those
-    affected by the Covenant school shooting in Nashville and the
-    soldier's families of the recent blackhawk helicopters that went
-    down out of Ft. Campbell. If anyone else would like to donate,
-    the links are below. God bless. -Kid Rock Caring for Covenant
-    Fund https://www.cfmt.org/.../support-survivors-of-the.../ Fort
-    Campbell Historical Foundation (The Carl Ferrazza Fund)
-    https://fortcampbell.com`,
-  },
-
-  {
-    title: "The 2nd Annual American Bad Ass Comedy Jam was a huge success!",
-    path: "Lincoln, CA",
-    date: "May 12, 2023",
-    img: "https://cdn.shopify.com/s/files/1/0086/9315/3852/articles/Group_Photo_No_Bird_smaller.jpg?v=1683923410",
-    text: ` Thank you to everyone who performed, organized, and attended The
-    2nd Annual American Bad Ass Comedy Jam at The Ryman here in
-    Nashville! We raised just over $87,000 dollars for the Kid Rock
-    Foundation. Every dime of that will be split between those
-    affected by the Covenant school shooting in Nashville and the
-    soldier's families of the recent blackhawk helicopters that went
-    down out of Ft. Campbell. If anyone else would like to donate,
-    the links are below. God bless. -Kid Rock Caring for Covenant
-    Fund https://www.cfmt.org/.../support-survivors-of-the.../ Fort
-    Campbell Historical Foundation (The Carl Ferrazza Fund)
-    https://fortcampbell.com`,
-  },
-
-  {
-    title: "The 2nd Annual American Bad Ass Comedy Jam was a huge success!",
-    path: "Lincoln, CA",
-    date: "May 12, 2023",
-    img: "https://cdn.shopify.com/s/files/1/0086/9315/3852/articles/Group_Photo_No_Bird_smaller.jpg?v=1683923410",
-    text: ` Thank you to everyone who performed, organized, and attended The
-    2nd Annual American Bad Ass Comedy Jam at The Ryman here in
-    Nashville! We raised just over $87,000 dollars for the Kid Rock
-    Foundation. Every dime of that will be split between those
-    affected by the Covenant school shooting in Nashville and the
-    soldier's families of the recent blackhawk helicopters that went
-    down out of Ft. Campbell. If anyone else would like to donate,
-    the links are below. God bless. -Kid Rock Caring for Covenant
-    Fund https://www.cfmt.org/.../support-survivors-of-the.../ Fort
-    Campbell Historical Foundation (The Carl Ferrazza Fund)
-    https://fortcampbell.com`,
-  },
-
-  {
-    title: "The 2nd Annual American Bad Ass Comedy Jam was a huge success!",
-    path: "Lincoln, CA",
-    date: "May 12, 2023",
-    img: "https://cdn.shopify.com/s/files/1/0086/9315/3852/articles/Group_Photo_No_Bird_smaller.jpg?v=1683923410",
-    text: ` Thank you to everyone who performed, organized, and attended The
-    2nd Annual American Bad Ass Comedy Jam at The Ryman here in
-    Nashville! We raised just over $87,000 dollars for the Kid Rock
-    Foundation. Every dime of that will be split between those
-    affected by the Covenant school shooting in Nashville and the
-    soldier's families of the recent blackhawk helicopters that went
-    down out of Ft. Campbell. If anyone else would like to donate,
-    the links are below. God bless. -Kid Rock Caring for Covenant
-    Fund https://www.cfmt.org/.../support-survivors-of-the.../ Fort
-    Campbell Historical Foundation (The Carl Ferrazza Fund)
-    https://fortcampbell.com`,
-  },
-
-  {
-    title: "The 2nd Annual American Bad Ass Comedy Jam was a huge success!",
-    path: "Lincoln, CA",
-    date: "May 12, 2023",
-    img: "https://cdn.shopify.com/s/files/1/0086/9315/3852/articles/Group_Photo_No_Bird_smaller.jpg?v=1683923410",
-    text: ` Thank you to everyone who performed, organized, and attended The
-    2nd Annual American Bad Ass Comedy Jam at The Ryman here in
-    Nashville! We raised just over $87,000 dollars for the Kid Rock
-    Foundation. Every dime of that will be split between those
-    affected by the Covenant school shooting in Nashville and the
-    soldier's families of the recent blackhawk helicopters that went
-    down out of Ft. Campbell. If anyone else would like to donate,
-    the links are below. God bless. -Kid Rock Caring for Covenant
-    Fund https://www.cfmt.org/.../support-survivors-of-the.../ Fort
-    Campbell Historical Foundation (The Carl Ferrazza Fund)
-    https://fortcampbell.com`,
-  },
-
-  {
-    title: "The 2nd Annual American Bad Ass Comedy Jam was a huge success!",
-    path: "Lincoln, CA",
-    date: "May 12, 2023",
-    img: "https://cdn.shopify.com/s/files/1/0086/9315/3852/articles/Group_Photo_No_Bird_smaller.jpg?v=1683923410",
-    text: ` Thank you to everyone who performed, organized, and attended The
-    2nd Annual American Bad Ass Comedy Jam at The Ryman here in
-    Nashville! We raised just over $87,000 dollars for the Kid Rock
-    Foundation. Every dime of that will be split between those
-    affected by the Covenant school shooting in Nashville and the
-    soldier's families of the recent blackhawk helicopters that went
-    down out of Ft. Campbell. If anyone else would like to donate,
-    the links are below. God bless. -Kid Rock Caring for Covenant
-    Fund https://www.cfmt.org/.../support-survivors-of-the.../ Fort
-    Campbell Historical Foundation (The Carl Ferrazza Fund)
-    https://fortcampbell.com`,
-  },
-];
