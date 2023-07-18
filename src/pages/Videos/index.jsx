@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import CTAButton from "../../components/CtaButton";
 import PageHeading from "../../components/PageHeading";
 
 const Videos = () => {
@@ -86,7 +85,7 @@ const Videos = () => {
       <div class="inline-flex items-center justify-center w-full mt-8">
         <hr class="w-10/12 h-0.5 my-8 mt-10 bg-gray-200 border-0 rounded dark:bg-gray-700" />
         <div class="text-5xl text-white absolute px-4 -translate-x-1/2 bg-[#aeaeae] left-1/2 dark:bg-gray-900">
-          {openTab ==1 ? 'All Videos' :"Official Videos"}
+          {openTab === 1 ? "All Videos" : "Official Videos"}
         </div>
       </div>
       <div className="w-9/12 lg:w-10/12 m-auto image_outer_box flex flex-wrap flex-row">

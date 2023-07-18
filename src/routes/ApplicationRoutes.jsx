@@ -7,12 +7,17 @@ import DashboardContainer from "../components/layout/dashboard_container/Dashboa
 // import { adminRoutes } from "./adminRoutes";
 import DashboardPage from "../pages/dashboard_page/DashboardPage";
 import Tour from "../components/Tour";
-import News from "../components/News";
-import Store from "../pages/store/Store";
-import ProductPage from "../pages/store/product";
-import Music from "../pages/Music/Music_page";
-import PhotosPage from "../pages/Photos/Photos_page";
-import Videos from "../pages/Videos/Videos";
+import News from "../pages/news";
+import Store from "../pages/store";
+import ProductOverviewPage from "../pages/store/overview";
+import Music from "../pages/Music";
+import PhotosPage from "../pages/Photos";
+import Videos from "../pages/Videos";
+
+import NewsOverviewPage from "../pages/news/overview";
+import MusicOverviewPage from "../pages/Music/overview";
+import PhotosOverviewPage from "../pages/Photos/overview";
+import VideosOverviewPage from "../pages/Videos/overview";
 
 function ApplicationRoutes() {
   // const currentUser = useSelector((state) => {
@@ -36,13 +41,21 @@ function ApplicationRoutes() {
       <Route path="/" element={<DashboardContainer />}>
         <Route path="/" element={<DashboardPage />} />
         <Route path="/tour" element={<Tour />} />
+
         <Route path="/news" element={<News />} />
+        <Route path="/news/:slug" element={<NewsOverviewPage />} />
+
         <Route path="/store" element={<Store />} />
-        <Route path="/store/:slug" element={<ProductPage />} />
+        <Route path="/store/:slug" element={<ProductOverviewPage />} />
+
         <Route path="/music" element={<Music />} />
+        <Route path="/music/:slug" element={<MusicOverviewPage />} />
+
         <Route path="/photos" element={<PhotosPage />} />
+        <Route path="/photos/:slug" element={<PhotosOverviewPage />} />
+
         <Route path="/videos" element={<Videos />} />
-        <Route path="/store" element={<Store />} />
+        <Route path="/videos/:slug" element={<VideosOverviewPage />} />
       </Route>
 
       {/* {currentUser == userType.admin && (
