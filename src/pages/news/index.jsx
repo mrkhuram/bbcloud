@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import CTAButton from "./CtaButton";
-import PageHeading from "./PageHeading";
+import CTAButton from "../../components/CtaButton";
+import PageHeading from "../../components/PageHeading";
 let News = () => {
   return (
     <div className="news_root py-32 ">
