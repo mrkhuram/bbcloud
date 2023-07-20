@@ -12,7 +12,6 @@ const DashboardPage = () => {
       {/* <Tour /> */}
       {/* <News /> */}
       <Music />
-      ere
     </>
   );
 };

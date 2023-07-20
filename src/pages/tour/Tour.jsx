@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom";
-import CTAButton from "./CtaButton";
-import PageHeading from "./PageHeading";
+import CTAButton from "../../components/CtaButton";
+import PageHeading from "../../components/PageHeading";
+
 let Tour = () => {
   return (
-    <div className="tour_root py-32 ">
+    <div className="tour_root pb-32 pt-8 lg:pt-20 xl:py-32">
       <PageHeading heading="Tour" />
 
       <div className="w-[97%] xl:w-[70%] text-center mx-auto">
@@ -11,7 +12,10 @@ let Tour = () => {
           {tours.map(({ month, date, title, area }, ind) => {
             if (ind < 10) {
               return (
-                <div className="flex flex-row flex-start items-center pt-10">
+                <div
+                  key={ind}
+                  className="flex flex-row flex-start items-center pt-10"
+                >
                   <div className="uppercase text-xl xl:text-5xl text-yellow-theme text-shadow-theme w-32 xl:w-64">
                     {month} <br /> {date}
                   </div>

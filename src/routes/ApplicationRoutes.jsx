@@ -6,7 +6,7 @@ import DashboardContainer from "../components/layout/dashboard_container/Dashboa
 // Routes
 // import { adminRoutes } from "./adminRoutes";
 import DashboardPage from "../pages/dashboard_page/DashboardPage";
-import Tour from "../components/Tour";
+import Tour from "../pages/tour/Tour";
 import News from "../pages/news";
 import Store from "../pages/store";
 import ProductOverviewPage from "../pages/store/overview";

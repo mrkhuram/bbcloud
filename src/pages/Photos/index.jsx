@@ -3,12 +3,13 @@ import PageHeading from "../../components/PageHeading";
 
 const DashboardPage = () => {
   return (
-    <div className="music_page_root py-32 ">
+    <div className="music_page_root pb-32 pt-8 lg:pt-20 xl:py-32">
       <PageHeading heading="Photos" />
-      <div className="w-9/12 lg:w-10/12 m-auto image_outer_box flex flex-wrap flex-row">
-        {[1, 2, 3, 4, 5].map((item) => (
-          <Link to={`/photos/photo-${item}`}>
-            <div className=" w-96 mt-3 mr-10  hover:text-[#dbb52f] text-white ">
+
+      <div className=" w-9/12 lg:w-10/12 m-auto image_outer_box flex flex-wrap flex-row gap-10 justify-center">
+        {[1, 2, 3, 4, 5].map((item, ind) => (
+          <Link to={`/photos/photo-${item}`} key={ind}>
+            <div className=" w-[90%] m-auto md:w-96 mt-3  hover:text-[#dbb52f] text-white ">
               <div className="poster overflow-hidden">
                 <img
                   src="https://kidrock.com/cdn/shop/files/We_the_People-2.jpg?v=1643917100"
