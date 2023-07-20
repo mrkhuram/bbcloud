@@ -12,7 +12,7 @@ let Music = () => {
     },
   };
   return (
-    <div className="music_root py-32 ">
+    <div className="music_root pb-32 pt-8 lg:pt-20 xl:py-32">
       <div className="w-[97%] xl:w-[70%]  flex flex-col xl:flex-row mx-auto">
         <div className="w-full xl:w-5/12 text-center mx-auto mb-5">
           <div className="uppercase text-gray-300 text-4xl xl:text-8xl text-shadow-theme text-yellow-theme">
@@ -26,7 +26,7 @@ let Music = () => {
             />
           </div>
           <div className="flex flex-col">
-            <div className="text-center pt-24">
+            <div className="text-center pt-4 pb-24 xl:pb-0 xl:pt-24">
               <CTAButton path="/" text="All Music" />
             </div>
           </div>
@@ -40,7 +40,7 @@ let Music = () => {
             <YouTube videoId="2g811Eo7K8U" opts={opts} />
           </div>
           <div className="flex flex-col">
-            <div className="text-center pt-24">
+            <div className="text-center pt-4 pb-0 xl:pb-0 xl:pt-24">
               <CTAButton path="/" text="All Videos" />
             </div>
           </div>
