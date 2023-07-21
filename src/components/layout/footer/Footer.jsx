@@ -1,10 +1,37 @@
+import { RiFacebookCircleLine } from "react-icons/ri";
+import { BsInstagram } from "react-icons/bs";
+import {
+  TiSocialYoutubeCircular,
+  TiSocialTwitterCircular,
+} from "react-icons/ti";
+
 const Footer = () => {
   return (
     <div className="footer_root bg-black py-10 w-full">
       <div className="w-[97%] xl:w-[70%] flex flex-col md:flex-row mx-auto  md:h-56">
         <div className="md:w-6/12 text-center border border-0 md:border-r-4 border-gray-500">
-          <div className="text-3xl lg:text-5xl uppercase text-white flex justify-center">
-            kid rock <div className="text-yellow-theme ml-3">Social</div>
+          <div className="text-3xl lg:text-5xl uppercase text-white flex flex-col justify-center mb-10 lg:mb-0">
+            <div className="flex justify-center mb-6">
+              kid rock <div className="text-yellow-theme ml-3">Social</div>
+            </div>
+            <div className="socialIcons w-40 justify-center gap-5 m-auto flex  ">
+              <RiFacebookCircleLine
+                fontSize={26}
+                fill="#9CA3AF"
+                className="-mt-0.5"
+              />
+              <BsInstagram fontSize={21} fill="#9CA3AF" className="mt-0.5" />
+              <TiSocialYoutubeCircular
+                fontSize={26}
+                fill="#9CA3AF"
+                className="-mt-0.5"
+              />
+              <TiSocialTwitterCircular
+                fontSize={28}
+                fill="#9CA3AF"
+                className="-mt-0.5"
+              />
+            </div>
           </div>
         </div>
         <div className="md:w-6/12 text-center">
