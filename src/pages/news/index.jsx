@@ -5,7 +5,7 @@ import { newsList } from "../../assets/data/news";
 
 let News = () => {
   return (
-    <div className="news_root pb-32 pt-8 lg:pt-20 xl:py-32">
+    <div className="news_root pb-32 pt-8 lg:pt-20">
       <PageHeading heading="The Latest" />
 
       <div className="w-[100%] xl:w-[70%] text-center mx-auto">

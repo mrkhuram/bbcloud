@@ -44,10 +44,10 @@ const Header = () => {
               alt=""
               className="mr-1"
             />
-            <Link to="/" className="uppercase mr-1">
+            <Link to="/login" className="uppercase mr-1">
               Login
             </Link>
-            <Link to="/" className="uppercase">
+            <Link to="/register" className="uppercase">
               {" / "}Create account
             </Link>
           </div>
@@ -89,7 +89,7 @@ const Header = () => {
             { title: "music", path: "/music" },
             { title: "photos", path: "/photos" },
             { title: "videos", path: "/videos" },
-            { title: "about", path: "/news" },
+            { title: "about", path: "/about" },
             { title: "store", path: "/store" },
           ].map((item, ind) => {
             return (

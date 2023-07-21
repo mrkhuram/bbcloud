@@ -3,7 +3,7 @@ import PageHeading from "../../components/PageHeading";
 
 const DashboardPage = () => {
   return (
-    <div className="music_page_root pb-32 pt-8 lg:pt-20 xl:py-32">
+    <div className="music_page_root pb-32 pt-8 lg:pt-20">
       <PageHeading heading="Photos" />
 
       <div className=" w-9/12 lg:w-10/12 m-auto image_outer_box flex flex-wrap flex-row gap-10 justify-center">

@@ -18,6 +18,9 @@ import NewsOverviewPage from "../pages/news/overview";
 import MusicOverviewPage from "../pages/Music/overview";
 import PhotosOverviewPage from "../pages/Photos/overview";
 import VideosOverviewPage from "../pages/Videos/overview";
+import About from "../pages/about/About";
+import Login from "../pages/login/Login";
+import Register from "../pages/login/Register";
 
 function ApplicationRoutes() {
   // const currentUser = useSelector((state) => {
@@ -56,6 +59,10 @@ function ApplicationRoutes() {
 
         <Route path="/videos" element={<Videos />} />
         <Route path="/videos/:slug" element={<VideosOverviewPage />} />
+
+        <Route path="/about" element={<About />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
       </Route>
 
       {/* {currentUser == userType.admin && (
