@@ -6,7 +6,7 @@ const Videos = () => {
   const [openTab, setOpenTab] = useState(1);
 
   return (
-    <div className="music_page_root pb-32 pt-8 lg:pt-20 xl:py-32">
+    <div className="music_page_root pb-32 pt-8 lg:pt-20 ">
       <PageHeading heading="Videos" />
 
       <div className="flex flex-wrap items-center justify-center pt-12">

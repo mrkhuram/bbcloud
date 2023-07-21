@@ -4,7 +4,7 @@ import PageHeading from "../../components/PageHeading";
 
 let Tour = () => {
   return (
-    <div className="tour_root pb-32 pt-8 lg:pt-20 xl:py-32">
+    <div className="tour_root pb-32 pt-8 lg:pt-20">
       <PageHeading heading="Tour" />
 
       <div className="w-[97%] xl:w-[70%] text-center mx-auto">
