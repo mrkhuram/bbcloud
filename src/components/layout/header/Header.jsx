@@ -11,6 +11,7 @@ import {
 import joinClasses from "../../../helpers/joinClasses";
 import { CiMenuBurger } from "react-icons/ci";
 import SideNavBar from "./SideNavBar";
+import { useSelector } from "react-redux";
 
 const Header = () => {
   const [showNavigation, setShowNavigation] = useState(false);

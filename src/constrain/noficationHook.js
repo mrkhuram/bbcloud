@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 export const useNotification = () => {
   const [notification, setNotification] = useState(null);
