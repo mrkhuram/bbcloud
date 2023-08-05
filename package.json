@@ -16,6 +16,7 @@
     "react-responsive-carousel": "^3.2.23",
     "react-router-dom": "^6.6.1",
     "react-scripts": "5.0.1",
+    "react-spinners": "^0.13.8",
     "react-spotify-embed": "^2.0.3",
     "react-swipe": "^6.0.4",
     "react-toastify": "^9.1.3",
