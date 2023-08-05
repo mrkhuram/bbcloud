@@ -5,23 +5,23 @@ import getDateAndMonthName from "../../constrain/dateFormat";
 import { getItems } from "../../constrain/helper";
 import { useEffect, useState } from "react";
 import { useNotification } from "../../constrain/noficationHook";
-import AppNotification from "../../constrain/AppNotification";
+import AppLoading from "../../constrain/AppLoading";
 
 let Tour = () => {
-  const [news, setNews] = useState(null);
+  const [tour, setTour] = useState(null);
   const { notification, pushNotification, closeNotification } =
     useNotification();
 
   useEffect(() => {
     async function fetchData() {
       try {
-        const allNews = await getItems("tour/read_all");
-        if (allNews.status === 200) {
-          const { data } = allNews;
-          setNews(data.Tour);
+        const alltour = await getItems("tour/read_all");
+        if (alltour.status === 200) {
+          const { data } = alltour;
+          setTour(data.Tour);
         }
       } catch (error) {
-        pushNotification("Fetching tour causing issue..");
+        pushNotification(error?.response?.data?.message);
       }
     }
 
@@ -29,24 +29,16 @@ let Tour = () => {
     // eslint-disable-next-line
   }, []);
 
-  if (!news)
-    return (
-      <div className="h-screen">
-        <h2>loading...</h2>
-        {notification && (
-          <AppNotification message={notification} close={closeNotification} />
-        )}
-      </div>
-    );
+  if (!tour)
+    return <AppLoading close={closeNotification} notification={notification} />;
 
-  console.log(news);
   return (
     <div className="tour_root pb-32 pt-8 lg:pt-20">
       <PageHeading heading="Tour" />
 
       <div className="w-[97%] xl:w-[70%] text-center mx-auto">
         <div className="flex flex-col">
-          {news.map(({ createdAt, title, city, state }, ind) => {
+          {tour.map(({ createdAt, title, city, state }, ind) => {
             if (ind < 10) {
               return (
                 <div
@@ -79,7 +71,7 @@ let Tour = () => {
             }
             return false;
           })}
-          {news?.length > 15 && (
+          {tour?.length > 15 && (
             <div className="text-center pt-24">
               <CTAButton path="/" text="All Dates" />
             </div>

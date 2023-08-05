@@ -1,8 +1,6 @@
 import axios from "axios";
 // import cookie from "react-cookies";
 
-const API_URL = process.env.REACT_APP_API_URL; // Change this to your API URL
-
 const sendRequest = async (method, url, dataObj) => {
   try {
     const response = await axios({
@@ -11,7 +9,6 @@ const sendRequest = async (method, url, dataObj) => {
       data: dataObj,
     });
 
-    console.log(response);
     return response;
   } catch (error) {
     throw error;
