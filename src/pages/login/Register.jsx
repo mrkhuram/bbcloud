@@ -1,6 +1,6 @@
 import React from "react";
 import "./style.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import { LoginSchema, RegisterSchema } from "./schema";
 import { useDispatch } from "react-redux";
@@ -13,6 +13,7 @@ const Register = () => {
   const { closeNotification, notification, pushNotification } =
     useNotification();
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const handleLoginSubmit = async (values, actions) => {
     try {
@@ -22,6 +23,9 @@ const Register = () => {
         dispatch(loginSuccess({ payload: user?.data?.user }));
       }
       actions.resetForm();
+      setTimeout(() => {
+        navigate("/");
+      }, 1500);
     } catch (error) {
       pushNotification(error?.response?.data?.message, 100000);
     }
@@ -39,6 +43,9 @@ const Register = () => {
         pushNotification("Register successfully!");
         dispatch(loginSuccess({ payload: newUser?.data?.user }));
         actions.resetForm();
+        setTimeout(() => {
+          navigate("/");
+        }, 1500);
       }
     } catch (error) {
       pushNotification(error?.response?.data?.message, 100000);

@@ -12,21 +12,25 @@ import joinClasses from "../../../helpers/joinClasses";
 import { CiMenuBurger } from "react-icons/ci";
 import SideNavBar from "./SideNavBar";
 import { useSelector } from "react-redux";
+import { LoginUser, LoggedinUser } from "./User";
 
 const Header = () => {
+  const user = useSelector((state) => state.user.currentUser);
   const [showNavigation, setShowNavigation] = useState(false);
-
   const showSideNavigation = () => setShowNavigation(true);
 
   return (
     <header className={headerTop}>
-      <div className=" w-auto flex justify-between px-6 lg:px-0">
+      <div className=" w-auto flex  px-6 py-2 md:py-1 lg:px-0">
         <Link
-          className="layout-topbar-logo  flex items-center justify-center"
+          className="layout-topbar-logo  flex items-center justify-center mr-auto"
           to="/"
         >
-          <img src={images.logo} alt="" className="w-[208px]" />
+          <img src={images.logo} alt="" className="w-[150px] md:w-[208px]" />
         </Link>
+        <div className="flex self-center mr-4 lg:hidden">
+          {user ? <LoggedinUser user={user} /> : <LoginUser />}
+        </div>
         <div className=" lg:hidden flex items-center justify-center">
           <CiMenuBurger
             fontSize={30}
@@ -39,25 +43,15 @@ const Header = () => {
 
       <div className="w-12/12 lg:w-9/12 flex flex-col items-center pt-3">
         <div className="flex justify-start lg:justify-end items-center w-full ml-8 lg:ml-0">
-          <div className="icon-btns flex text-gray-400">
-            <img
-              src="https://cdn.shopify.com/s/files/1/0086/9315/3852/t/2/assets/2016_0802_2506_4215.png?v=134684327857078586071555953557"
-              alt=""
-              className="mr-1"
-            />
-            <Link to="/login" className="uppercase mr-1">
-              Login
-            </Link>
-            <Link to="/register" className="uppercase">
-              {" / "}Create account
-            </Link>
+          <div className="hidden lg:block">
+            {user ? <LoggedinUser user={user} /> : <LoginUser />}
           </div>
 
           <div className="subscribe hidden lg:block">
             <input
               type="text"
-              className="border-none bg-black w-64 p-2 -mt-2 ml-3 outline-none text-white"
-              placeholder="Enter email for updates"
+              className="border-none bg-theme-1/50 w-48 rounded p-1  mr-2 ml-2 outline-none text-white"
+              placeholder="enter email for updates"
             />
             <button className="bg-gray-300 py-0.5 px-2 rounded-sm uppercase">
               Go
@@ -120,5 +114,5 @@ const Header = () => {
 export default Header;
 
 const headerTop = [
-  "header-top lg:h-24 flex bg-black flex-col lg:flex-row justify-center",
+  "header-top flex bg-black flex-col lg:flex-row justify-center",
 ].join("");
