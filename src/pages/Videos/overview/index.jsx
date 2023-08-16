@@ -6,7 +6,6 @@ import ReturnHome from "../../../components/ReturnHome";
 const VideosOverviewPage = () => {
   const { slug } = useParams();
 
-  console.log(slug);
 
   return (
     <div className="w-full py-6 text-black">
