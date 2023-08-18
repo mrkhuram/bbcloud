@@ -33,7 +33,7 @@ let Tour = () => {
     return <AppLoading close={closeNotification} notification={notification} />;
 
   return (
-    <div className="tour_root pb-32 pt-8 lg:pt-20">
+    <div className="tour_root pb-32 pt-8 lg:pt-20 min-h-[70vh]">
       <PageHeading heading="Tour" />
 
       <div className="w-[97%] xl:w-[70%] text-center mx-auto">
