@@ -71,11 +71,10 @@ let Tour = () => {
             }
             return false;
           })}
-          {tour?.length > 15 && (
-            <div className="text-center pt-24">
-              <CTAButton path="/" text="All Dates" />
-            </div>
-          )}
+
+          <div className="text-center pt-24">
+            <CTAButton path="/tour" text="All Dates" />
+          </div>
         </div>
       </div>
     </div>

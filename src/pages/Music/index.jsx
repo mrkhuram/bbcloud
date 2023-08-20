@@ -27,7 +27,7 @@ let Music = () => {
           </div>
           <div className="flex flex-col">
             <div className="text-center pt-4 pb-24 xl:pb-0 xl:pt-24">
-              <CTAButton path="/" text="All Music" />
+              <CTAButton path="/music" text="All Music" />
             </div>
           </div>
         </div>
@@ -41,7 +41,7 @@ let Music = () => {
           </div>
           <div className="flex flex-col">
             <div className="text-center pt-4 pb-0 xl:pb-0 xl:pt-24">
-              <CTAButton path="/" text="All Videos" />
+              <CTAButton path="/videos" text="All Videos" />
             </div>
           </div>
         </div>

@@ -1,16 +1,14 @@
-// import Tour from "../../components/Tour";
-// import News from "../news";
-// import Music from "../../components/Music";
-
 import CarouselComp from "../../components/Carousel";
 import Music from "../Music";
+import News from "../news";
+import Tour from "../tour/Tour";
 
 const DashboardPage = () => {
   return (
     <>
       <CarouselComp />
-      {/* <Tour /> */}
-      {/* <News /> */}
+      <Tour />
+      <News />
       <Music />
     </>
   );

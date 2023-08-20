@@ -48,7 +48,7 @@ let News = () => {
                 className="item w-[90%] xl:w-[70%] m-auto flex  flex-col md:flex-row bg-news p-4 mb-8"
                 key={ind}
               >
-                <div className="w-full md:w-6/12 mb-8 md:mb-0">
+                <div className="w-full mb-8 md:mb-0">
                   <img
                     src={
                       "https://cdn.shopify.com/s/files/1/0086/9315/3852/articles/Group_Photo_No_Bird_smaller.jpg?v=1683923410"
@@ -57,7 +57,7 @@ let News = () => {
                     className="h-full object-contain lg:object-fill"
                   />
                 </div>
-                <div className="w-full md:w-6/12 flex flex-col md:pl-5">
+                <div className="w-full flex flex-col md:pl-5">
                   <div className="flex flex-row justify-between mb-4 md:mb-0">
                     <div className="text-white capitalize">
                       {formatDate(createdAt)}
@@ -82,7 +82,7 @@ let News = () => {
         </div>
         <div className="flex flex-col">
           <div className="text-center pt-24">
-            <CTAButton path="/" text="All News" />
+            <CTAButton path="/news" text="All News" />
           </div>
         </div>
       </div>
