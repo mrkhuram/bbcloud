@@ -21,6 +21,8 @@ import VideosOverviewPage from "../pages/Videos/overview";
 import About from "../pages/about/About";
 import Login from "../pages/login/Login";
 import Register from "../pages/login/Register";
+import SuccessPayment from "../pages/payment/SuccessPayment";
+import DeclinePayment from "../pages/payment/DeclinePayment";
 
 function ApplicationRoutes() {
   // const currentUser = useSelector((state) => {
@@ -63,6 +65,9 @@ function ApplicationRoutes() {
         <Route path="/about" element={<About />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+
+        <Route path="/success" element={<SuccessPayment />} />
+        <Route path="/decline" element={<DeclinePayment />} />
       </Route>
 
       {/* {currentUser == userType.admin && (
