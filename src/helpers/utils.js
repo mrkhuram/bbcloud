@@ -72,3 +72,6 @@ export const errorToast = (str) => {
     const textHtml = <span dangerouslySetInnerHTML={{ __html: text }}></span>;
     toast.error(textHtml);
 };
+
+
+export const imageBaseURL = "http://localhost:5000/uploads"

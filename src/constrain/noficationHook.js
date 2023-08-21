@@ -5,9 +5,11 @@ export const useNotification = () => {
 
   const pushNotification = (message, duration = 3000) => {
     setNotification(message);
-    setTimeout(() => {
+    let timeout = setTimeout(() => {
       setNotification(null);
     }, duration);
+
+    return ()=>clearTimeout(timeout)
   };
 
   const closeNotification = () => setNotification(null);

@@ -1,16 +1,13 @@
 import React, { useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link, useLocation, useParams } from "react-router-dom";
 import { dataStore } from "../../../assets/data/store";
 import ReturnHome from "../../../components/ReturnHome";
-// import PageHeading from "../../../components/PageHeading";
 import { AiOutlinePlus, AiOutlineMinus } from "react-icons/ai";
 
 const ProductPage = () => {
   const { slug } = useParams();
   const [quantity, setQuantity] = useState(0);
-  console.log(slug);
-  const product = dataStore.find((p) => p.ref === slug);
-
+  let {state:product} = useLocation()
   const inc = () => {
     setQuantity(quantity + 1);
   };
@@ -26,10 +23,10 @@ const ProductPage = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 justify-center gap-20 mt-12 lg:mt-32">
           <div className="flex items-center justify-center">
-            <img src={product.image} alt="product pic" />
+            <img src={product.product_image} alt="product pic" />
           </div>
           <div>
-            <h2 className="text-3xl lg:text-5xl">{product.name}</h2>
+            <h2 className="text-3xl lg:text-5xl">{product.title}</h2>
             <p className="my-8 ml-2">{product.price}</p>
 
             <div className="mt-4">
@@ -54,8 +51,11 @@ const ProductPage = () => {
               <button
                 type="button"
                 className="text-white mt-4 w-full bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full px-5 py-2.5 text-center mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                onClick={()=>{
+                  window.location.replace(`http://localhost:5000/api/pay/${product._id}`,'_blank', 'rel=bobbybbc')
+                }}
               >
-                Buy with shoppay
+                Buy with papypal
               </button>
             </div>
           </div>

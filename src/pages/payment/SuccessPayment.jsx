@@ -1,8 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { FaCheck } from "react-icons/fa";
 import CTAButton from "../../components/CtaButton";
+import { useNavigate } from "react-router-dom";
 
 const SuccessPayment = () => {
+  let navigate = useNavigate();
+  useEffect(() => {
+    let timeout = setTimeout(() => {
+      navigate("/store");
+    }, 3000);
+    return ()=> clearTimeout(timeout);
+  });
+
   return (
     <div className="min-h-[80vh] flex items-center justify-center bg-[#444]">
       <div className="bg-white p-10 rounded">

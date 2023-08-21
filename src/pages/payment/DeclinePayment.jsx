@@ -1,8 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
 import CTAButton from "../../components/CtaButton";
 import { BiErrorAlt } from "react-icons/bi";
+import { useNavigate } from "react-router-dom";
 
 const DeclinePayment = () => {
+  let navigate = useNavigate();
+  useEffect(() => {
+    let timeout = setTimeout(() => {
+      navigate("/store");
+    }, 3000);
+    return ()=> clearTimeout(timeout);
+  });
   return (
     <div className="min-h-[80vh] flex items-center justify-center bg-[#444]">
       <div className="bg-white p-10 rounded">
