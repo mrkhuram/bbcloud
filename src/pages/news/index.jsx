@@ -42,7 +42,7 @@ let News = () => {
           News
         </div>
         <div className="news_list flex flex-col mt-5 justify-between">
-          {news.map(({ createdAt, title, _id, img, description }, ind) => {
+          {news.map(({ createdAt, title, _id, image, description }, ind) => {
             return (
               <div
                 className="item w-[90%] xl:w-[90%] m-auto flex  flex-col md:flex-row bg-news p-4 mb-8"
@@ -50,10 +50,8 @@ let News = () => {
               >
                 <div className="w-full mb-8 md:mb-0">
                   <img
-                    src={
-                      "https://cdn.shopify.com/s/files/1/0086/9315/3852/articles/Group_Photo_No_Bird_smaller.jpg?v=1683923410"
-                    }
-                    alt=""
+                    src={`http://16.171.254.234:5000/uploads/${image}`}
+                    alt="album images"
                     className="h-full object-contain lg:object-fill"
                   />
                 </div>

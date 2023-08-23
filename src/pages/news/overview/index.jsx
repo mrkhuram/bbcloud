@@ -47,7 +47,7 @@ const NewsOverviewPage = () => {
         <p className="mt-8 mb-8">{news.description}</p>
         <div className="w-1/2">
           <img
-            src="https://cdn.shopify.com/s/files/1/0086/9315/3852/articles/Group_Photo_No_Bird_smaller.jpg?v=1683923410"
+            src={`http://16.171.254.234:5000/uploads/${news.image}`}
             alt=""
           />
         </div>

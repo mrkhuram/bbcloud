@@ -16,6 +16,7 @@ const ProductPage = () => {
     setQuantity(quantity - 1);
   };
 
+  console.log(product);
   return (
     <div className="w-full py-6 text-black">
       <div className=" m-auto w-[80%] xl:w-[70%]">
@@ -23,7 +24,10 @@ const ProductPage = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 justify-center gap-20 mt-12 lg:mt-32">
           <div className="flex items-center justify-center">
-            <img src={product.product_image} alt="product pic" />
+            <img
+              src={`http://16.171.254.234:5000/uploads/${product.product_image}`}
+              alt="product pic"
+            />
           </div>
           <div>
             <h2 className="text-3xl lg:text-5xl">{product.title}</h2>
@@ -36,12 +40,7 @@ const ProductPage = () => {
                 <p>{quantity}</p>
                 <AiOutlinePlus onClick={inc} className="cursor-pointer" />
               </div>
-              <p className="mt-8 mb-6">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Possimus quidem, fuga accusamus suscipit sapiente laborum vero
-                assumenda est repellat voluptatem quo placeat doloremque aliquid
-                veritatis consequuntur odio labore eos officia?
-              </p>
+              <p className="mt-8 mb-6">{product.description}</p>
               <button
                 type="button"
                 className="py-2.5 px-5 w-full font-medium text-gray-900 focus:outline-none bg-white rounded-full border border-gray-200 hover:bg-gray-100 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
@@ -66,7 +65,7 @@ const ProductPage = () => {
         </div>
       </div>
 
-      <div className="w-[80%] m-auto ">
+      {/* <div className="w-[80%] m-auto ">
         <h3 className="text-2xl lg:text-3xl mt-40 mb-16">You may also like</h3>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
           {dataStore.map((store, index) => {
@@ -94,7 +93,7 @@ const ProductPage = () => {
             );
           })}
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
