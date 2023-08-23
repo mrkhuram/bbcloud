@@ -82,7 +82,7 @@ const Header = () => {
             { title: "tour", path: "/tour" },
             { title: "news", path: "/news" },
             { title: "music", path: "/music" },
-            { title: "photos", path: "/photos" },
+            { title: "Album", path: "/album" },
             { title: "videos", path: "/videos" },
             { title: "about", path: "/about" },
             { title: "store", path: "/store" },
@@ -114,5 +114,5 @@ const Header = () => {
 export default Header;
 
 const headerTop = [
-  "header-top flex bg-black flex-col lg:flex-row justify-center",
+  "header-top flex bg-black flex-col lg:flex-row justify-center py-3",
 ].join("");

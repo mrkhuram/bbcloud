@@ -36,10 +36,10 @@ const NewsOverviewPage = () => {
 
   return (
     <div className="w-full py-6 text-black">
-      <div className=" m-auto w-[80%] xl:w-1/2">
+      <div className=" m-auto w-[80%] xl:w-[70%]">
         <ReturnHome link={"/news"} title={"Return to all news"} />
 
-        <h1 className="text-3xl lg:text-5xl  mb-6 text-theme-1">
+        <h1 className="text-5xl uppercase lg:text-6xl  mb-6 text-theme-1">
           {news.title}
         </h1>
         <p className="text-center">{formatDate(news.createdAt)}</p>

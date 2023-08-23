@@ -41,7 +41,7 @@ const Register = () => {
       {notification && (
         <AppNotification close={closeNotification} message={notification} />
       )}
-      <div className="flex flex-col lg:flex-row">
+      <div className="flex flex-col lg:flex-row w-[90%] md:w-[80%] lg:w-[60%] xl:w-[50%] m-auto">
         <div className="flex-1 mt-12 lg:mt-0">
           <h1 className="text-2xl md:text-3xl lg:text-5xl text-center text-white font-bold">
             Kid Rock Registration
@@ -141,10 +141,20 @@ const Register = () => {
                 <div className="mt-4">
                   <button
                     type="submit"
-                    className="border-theme-1 border px-8 py-2 mb-8 uppercase hover:bg-theme-1 text-white text-xl md:text-2xl "
+                    className="border-theme-1 border px-8 py-2 mb-2 uppercase hover:bg-theme-1 text-white text-xl md:text-2xl "
                   >
                     Register
                   </button>
+                </div>
+
+                <div className="mt-4">
+                  <Link
+                    to="/login"
+                    type="submit"
+                    className="border-theme-1 border px-8 py-2 mb-8 uppercase hover:bg-theme-1 text-white text-xl md:text-2xl "
+                  >
+                    Already have an account?
+                  </Link>
                 </div>
               </Form>
             )}

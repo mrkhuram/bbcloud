@@ -36,7 +36,7 @@ const Login = () => {
       {notification && (
         <AppNotification close={closeNotification} message={notification} />
       )}
-      <div className="flex flex-col lg:flex-row mt-10">
+      <div className="flex flex-col lg:flex-row mt-10 w-[90%] md:w-[80%] lg:w-[60%] xl:w-[50%] m-auto">
         <div className="flex-1">
           <h1 className="text-2xl md:text-3xl lg:text-5xl text-center text-white font-bold">
             Kid Rock login

@@ -6,10 +6,9 @@ import ReturnHome from "../../../components/ReturnHome";
 const VideosOverviewPage = () => {
   const { slug } = useParams();
 
-
   return (
     <div className="w-full py-6 text-black">
-      <div className=" m-auto w-[80%] xl:w-1/2">
+      <div className=" m-auto w-[80%] xl:w-[70%]">
         <ReturnHome link={"/videos"} title={"Return to all videos"} />
         <PageHeading heading={"Video"} />
 

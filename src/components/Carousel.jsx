@@ -10,7 +10,7 @@ const CarouselComp = () => {
       showStatus={false}
       autoPlay={false}
       swipeable={true}
-      className="!bg-red-500"
+      className=""
     >
       <div>
         <Link to="/store">

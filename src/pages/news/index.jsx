@@ -37,15 +37,15 @@ let News = () => {
     <div className="news_root pb-32 pt-8 lg:pt-20">
       <PageHeading heading="The Latest" />
 
-      <div className="w-[100%] xl:w-[70%] text-center mx-auto">
-        <div className="uppercase w-[90%] xl:w-[70%] m-auto  text-gray-300 text-3xl xl:text-6xl text-shadow-theme text-yellow-theme text-left">
+      <div className="w-[100%] xl:w-[90%] text-center mx-auto">
+        <div className="uppercase w-[90%] xl:w-[90%] m-auto  text-gray-300 text-3xl xl:text-6xl text-shadow-theme text-yellow-theme text-left">
           News
         </div>
         <div className="news_list flex flex-col mt-5 justify-between">
           {news.map(({ createdAt, title, _id, img, description }, ind) => {
             return (
               <div
-                className="item w-[90%] xl:w-[70%] m-auto flex  flex-col md:flex-row bg-news p-4 mb-8"
+                className="item w-[90%] xl:w-[90%] m-auto flex  flex-col md:flex-row bg-news p-4 mb-8"
                 key={ind}
               >
                 <div className="w-full mb-8 md:mb-0">
@@ -68,7 +68,7 @@ let News = () => {
                   </div>
                   <Link
                     to={_id}
-                    className="break-normal hover:underline text-white text-2xl xl:text-4xl md:w-10/12 text-left"
+                    className=" uppercase break-normal hover:underline text-white text-2xl lg:text-4xl md:w-10/12 text-left"
                   >
                     {title}
                   </Link>

@@ -23,6 +23,7 @@ import Login from "../pages/login/Login";
 import Register from "../pages/login/Register";
 import SuccessPayment from "../pages/payment/SuccessPayment";
 import DeclinePayment from "../pages/payment/DeclinePayment";
+import ScrollToTopHOC from "../components/scrollToTopHOC/scrollToTopHOC";
 
 function ApplicationRoutes() {
   // const currentUser = useSelector((state) => {
@@ -43,31 +44,158 @@ function ApplicationRoutes() {
         <Route path='/verify-otp' element={<VerifyOTP />} />
         <Route path='/set-new-password' element={<SetNewPassword />} />
       </Route> */}
-      <Route path="/" element={<DashboardContainer />}>
-        <Route path="/" element={<DashboardPage />} />
-        <Route path="/tour" element={<Tour />} />
 
-        <Route path="/news" element={<News />} />
-        <Route path="/news/:slug" element={<NewsOverviewPage />} />
+      <Route
+        path="/"
+        element={
+          <ScrollToTopHOC>
+            <DashboardContainer />
+          </ScrollToTopHOC>
+        }
+      >
+        <Route
+          path="/"
+          element={
+            <ScrollToTopHOC>
+              <DashboardPage />
+            </ScrollToTopHOC>
+          }
+        />
+        <Route
+          path="/tour"
+          element={
+            <ScrollToTopHOC>
+              <Tour />
+            </ScrollToTopHOC>
+          }
+        />
 
-        <Route path="/store" element={<Store />} />
-        <Route path="/store/:slug" element={<ProductOverviewPage />} />
+        <Route
+          path="/news"
+          element={
+            <ScrollToTopHOC>
+              <News />
+            </ScrollToTopHOC>
+          }
+        />
+        <Route
+          path="/news/:slug"
+          element={
+            <ScrollToTopHOC>
+              <NewsOverviewPage />
+            </ScrollToTopHOC>
+          }
+        />
 
-        <Route path="/music" element={<Music />} />
-        <Route path="/music/:slug" element={<MusicOverviewPage />} />
+        <Route
+          path="/store"
+          element={
+            <ScrollToTopHOC>
+              <Store />
+            </ScrollToTopHOC>
+          }
+        />
+        <Route
+          path="/store/:slug"
+          element={
+            <ScrollToTopHOC>
+              <ProductOverviewPage />
+            </ScrollToTopHOC>
+          }
+        />
 
-        <Route path="/photos" element={<PhotosPage />} />
-        <Route path="/photos/:slug" element={<PhotosOverviewPage />} />
+        <Route
+          path="/music"
+          element={
+            <ScrollToTopHOC>
+              <Music />
+            </ScrollToTopHOC>
+          }
+        />
+        <Route
+          path="/music/:slug"
+          element={
+            <ScrollToTopHOC>
+              <MusicOverviewPage />
+            </ScrollToTopHOC>
+          }
+        />
 
-        <Route path="/videos" element={<Videos />} />
-        <Route path="/videos/:slug" element={<VideosOverviewPage />} />
+        <Route
+          path="/album"
+          element={
+            <ScrollToTopHOC>
+              <PhotosPage />
+            </ScrollToTopHOC>
+          }
+        />
+        <Route
+          path="/album/:slug"
+          element={
+            <ScrollToTopHOC>
+              <PhotosOverviewPage />
+            </ScrollToTopHOC>
+          }
+        />
 
-        <Route path="/about" element={<About />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
+        <Route
+          path="/videos"
+          element={
+            <ScrollToTopHOC>
+              <Videos />
+            </ScrollToTopHOC>
+          }
+        />
+        <Route
+          path="/videos/:slug"
+          element={
+            <ScrollToTopHOC>
+              <VideosOverviewPage />
+            </ScrollToTopHOC>
+          }
+        />
 
-        <Route path="/success" element={<SuccessPayment />} />
-        <Route path="/decline" element={<DeclinePayment />} />
+        <Route
+          path="/about"
+          element={
+            <ScrollToTopHOC>
+              <About />
+            </ScrollToTopHOC>
+          }
+        />
+        <Route
+          path="/login"
+          element={
+            <ScrollToTopHOC>
+              <Login />
+            </ScrollToTopHOC>
+          }
+        />
+        <Route
+          path="/register"
+          element={
+            <ScrollToTopHOC>
+              <Register />
+            </ScrollToTopHOC>
+          }
+        />
+
+        <Route
+          path="/success"
+          element={
+            <ScrollToTopHOC>
+              <SuccessPayment />
+            </ScrollToTopHOC>
+          }
+        />
+        <Route
+          path="/decline"
+          element={
+            <ScrollToTopHOC>
+              <DeclinePayment />
+            </ScrollToTopHOC>
+          }
+        />
       </Route>
 
       {/* {currentUser == userType.admin && (

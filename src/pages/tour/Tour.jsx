@@ -36,7 +36,7 @@ let Tour = () => {
     <div className="tour_root pb-32 pt-8 lg:pt-20 min-h-[70vh]">
       <PageHeading heading="Tour" />
 
-      <div className="w-[97%] xl:w-[70%] text-center mx-auto">
+      <div className="w-[97%] xl:w-[90%] text-center mx-auto">
         <div className="flex flex-col">
           {tour.map(({ createdAt, title, city, state }, ind) => {
             if (ind < 10) {
@@ -53,7 +53,7 @@ let Tour = () => {
                     to="/"
                     className="flex-col text-left hover:underline underline-color"
                   >
-                    <div className="text-gray-200 text-xl xl:text-6xl uppercase w-[10rem] xl:w-[30rem] font-bold">
+                    <div className="text-gray-200 text-4xl lg:text-6xl uppercase  font-bold">
                       {title}
                     </div>
                     <div className="text-lg xl:text-3xl text-gray-500 capitalize">

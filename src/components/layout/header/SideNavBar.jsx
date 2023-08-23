@@ -9,7 +9,7 @@ const SideNavBar = ({ hideSideBar }) => {
     { title: "tour", path: "/tour" },
     { title: "news", path: "/news" },
     { title: "music", path: "/music" },
-    { title: "photos", path: "/photos" },
+    { title: "Album", path: "/album" },
     { title: "videos", path: "/videos" },
     { title: "about", path: "/news" },
     { title: "store", path: "/store" },

@@ -7,7 +7,7 @@ import { AiOutlinePlus, AiOutlineMinus } from "react-icons/ai";
 const ProductPage = () => {
   const { slug } = useParams();
   const [quantity, setQuantity] = useState(0);
-  let {state:product} = useLocation()
+  let { state: product } = useLocation();
   const inc = () => {
     setQuantity(quantity + 1);
   };
@@ -18,7 +18,7 @@ const ProductPage = () => {
 
   return (
     <div className="w-full py-6 text-black">
-      <div className=" m-auto w-[80%] xl:w-1/2">
+      <div className=" m-auto w-[80%] xl:w-[70%]">
         <ReturnHome link={"/store"} title={"Return to store"} />
 
         <div className="grid grid-cols-1 lg:grid-cols-2 justify-center gap-20 mt-12 lg:mt-32">
@@ -51,8 +51,12 @@ const ProductPage = () => {
               <button
                 type="button"
                 className="text-white mt-4 w-full bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full px-5 py-2.5 text-center mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                onClick={()=>{
-                  window.location.replace(`http://localhost:5000/api/pay/${product._id}`,'_blank', 'rel=bobbybbc')
+                onClick={() => {
+                  window.location.replace(
+                    `http://localhost:5000/api/pay/${product._id}`,
+                    "_blank",
+                    "rel=bobbybbc"
+                  );
                 }}
               >
                 Buy with papypal
