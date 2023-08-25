@@ -65,7 +65,7 @@ let News = () => {
                     </div>
                   </div>
                   <Link
-                    to={_id}
+                    to={`/news/${_id}`}
                     className=" uppercase break-normal hover:underline text-white text-2xl lg:text-4xl md:w-10/12 text-left"
                   >
                     {title}
