@@ -7,8 +7,8 @@ const DashboardPage = () => {
   return (
     <>
       <CarouselComp />
-      <Tour />
-      <News />
+      <Tour isLandingPage={true} />
+      <News isLandingPage={true} />
       <Music />
     </>
   );

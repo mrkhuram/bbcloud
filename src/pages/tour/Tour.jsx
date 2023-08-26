@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 import { useNotification } from "../../constrain/noficationHook";
 import AppLoading from "../../constrain/AppLoading";
 
-let Tour = () => {
+let Tour = ({ isLandingPage }) => {
   const [tour, setTour] = useState(null);
   const { notification, pushNotification, closeNotification } =
     useNotification();
@@ -72,9 +72,11 @@ let Tour = () => {
             return false;
           })}
 
-          <div className="text-center pt-24">
-            <CTAButton path="/tour" text="All Dates" />
-          </div>
+          {isLandingPage && (
+            <div className="text-center pt-24">
+              <CTAButton path="/tour" text="All Dates" />
+            </div>
+          )}
         </div>
       </div>
     </div>

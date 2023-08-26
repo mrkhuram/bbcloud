@@ -1,9 +1,19 @@
 import React, { useState } from "react";
 import PageHeading from "../../components/PageHeading";
 import { Link } from "react-router-dom";
+import { youtubeData } from "../../assets";
+import YouTube from "react-youtube";
 
 const Videos = () => {
   const [openTab, setOpenTab] = useState(1);
+
+  const opts = {
+    height: "390",
+    width: "100%",
+    playerVars: {
+      autoplay: 0,
+    },
+  };
 
   return (
     <div className="music_page_root pb-32 pt-8 lg:pt-20 ">
@@ -63,22 +73,24 @@ const Videos = () => {
         </div>
       </div>
       <div className="w-9/12 justify-center gap-8 lg:w-10/12 m-auto image_outer_box flex flex-wrap flex-row">
-        {[1, 2, 3, 4, 5].map((item, ind) => (
+        {/* <YouTube videoId="2g811Eo7K8U" opts={opts} /> */}
+
+        {youtubeData.map((item, ind) => (
           <Link to={`video-${item}`} key={ind}>
             <div
               key={item}
               className="w-[16rem] md:w-96 mt-3  hover:text-[#dbb52f] text-white "
             >
               <div className="poster overflow-hidden">
-                <img
-                  src="https://kidrock.com/cdn/shop/files/We_the_People-2.jpg?v=1643917100"
-                  alt=""
-                  className="hover:scale-110 transition-transform delay-75 duration-75 ease-in-out"
-                />
+                <YouTube videoId={item.url} opts={opts} />
               </div>
               <div className="details bg-[#383838b3] h-40 text-center flex flex-col items-center justify-center ">
-                <div className="text-4xl font-bold ">We the People</div>
-                <div className="text-2xl text-yellow-theme">(Jan 21, 2022)</div>
+                <div className="text-3xl text-start mx-2 font-bold ">
+                  {item.title}
+                </div>
+                <div className="text-2xl text-yellow-theme mt-4">
+                  ({item.uploadedAt})
+                </div>
               </div>
             </div>
           </Link>

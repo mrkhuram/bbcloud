@@ -1,6 +1,6 @@
 import React from "react";
-// import { Link } from "react-router-dom";
 import PageHeading from "../../components/PageHeading";
+import appImages from "../../assets";
 
 const About = () => {
   return (
@@ -15,11 +15,7 @@ const About = () => {
           </div>
         </div>
         <div className="w-full h-full m-auto mt-4 mb-4">
-          <img
-            src="https://kidrock.com/cdn/shop/t/2/assets/2013_1002_2840_594.jpeg?v=33415565719819587081556134704"
-            alt="kid roc"
-            className="m-auto"
-          />
+          <img src={appImages.main[0]} alt="kid roc" className="m-auto" />
         </div>
         <div>
           <p className="text-black text-lg md:text-2xl ">

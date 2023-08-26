@@ -37,7 +37,7 @@ function Store() {
   return (
     <div className="py-6 mt-20">
       <PageHeading heading={"Store"} />
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 text-center text-black m-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 lg:gap-10 text-center text-black m-10">
         {products.map((data, index) => {
           return (
             <Link to={`/store/${data._id}`} state={data} key={index}>
@@ -54,12 +54,16 @@ function Store() {
                 <img
                   src={`http://16.171.254.234:5000/uploads/${data.product_image}`}
                   alt={`Clothing ${index + 1}`}
-                  style={{ maxWidth: "60%", height: "auto" }}
+                  style={{ maxWidth: "20rem", height: "auto" }}
                   className="transition-all transform-gpu hover:scale-105 hover:duration-300"
                 />
-                <p>{data.title}</p>
-                <p>Left: {data.quantity}</p>
-                <p>${data.price}</p>
+                <div className="py-2 px-4 bg-[#eaeaea] shadow-lg w-full max-w-[20rem]">
+                  <p className="text-start text-xl mb-2">{data.title}</p>
+                  <div className="flex items-center justify-between">
+                    <p>Quantity: {data.quantity}</p>
+                    <p>Price: ${data.price}</p>
+                  </div>
+                </div>
               </div>
             </Link>
           );

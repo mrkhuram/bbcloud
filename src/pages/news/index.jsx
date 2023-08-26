@@ -7,7 +7,7 @@ import { useNotification } from "../../constrain/noficationHook";
 import AppLoading from "../../constrain/AppLoading";
 import { formatDate } from "../../constrain/dateFormat";
 
-let News = () => {
+let News = ({ isLandingPage }) => {
   const [news, setNews] = useState(null);
   const { notification, pushNotification, closeNotification } =
     useNotification();
@@ -79,9 +79,11 @@ let News = () => {
           })}
         </div>
         <div className="flex flex-col">
-          <div className="text-center pt-24">
-            <CTAButton path="/news" text="All News" />
-          </div>
+          {isLandingPage && (
+            <div className="text-center pt-24">
+              <CTAButton path="/news" text="All News" />
+            </div>
+          )}
         </div>
       </div>
     </div>
