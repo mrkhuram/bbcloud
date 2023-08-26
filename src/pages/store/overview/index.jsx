@@ -3,6 +3,7 @@ import { Link, useLocation, useParams } from "react-router-dom";
 import { dataStore } from "../../../assets/data/store";
 import ReturnHome from "../../../components/ReturnHome";
 import { AiOutlinePlus, AiOutlineMinus } from "react-icons/ai";
+import { imageBaseURL } from "../../../helpers/utils";
 
 const ProductPage = () => {
   const { slug } = useParams();
@@ -25,7 +26,7 @@ const ProductPage = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 justify-center gap-20 mt-12 lg:mt-32">
           <div className="flex items-center justify-center">
             <img
-              src={`http://16.171.254.234:5000/uploads/${product.product_image}`}
+              src={`${imageBaseURL}/${product.product_image}`}
               alt="product pic"
             />
           </div>

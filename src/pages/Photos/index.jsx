@@ -5,6 +5,7 @@ import { useNotification } from "../../constrain/noficationHook";
 import { getItems } from "../../constrain/helper";
 import AppLoading from "../../constrain/AppLoading";
 import { formatDate } from "../../constrain/dateFormat";
+import { imageBaseURL } from "../../helpers/utils";
 
 const PhotosPage = () => {
   const [album, setAlbum] = useState(null);
@@ -41,7 +42,7 @@ const PhotosPage = () => {
             <div className=" w-[90%] m-auto md:w-96 mt-3  hover:text-[#dbb52f] text-white ">
               <div className="poster overflow-hidden bg-[#38383">
                 <img
-                  src={`http://16.171.254.234:5000/uploads/${item?.title_img}`}
+                  src={`${imageBaseURL}/${item?.title_img}`}
                   alt=""
                   className="bg-[#383838b3] p-2 hover:scale-110 transition-transform delay-75 duration-75 ease-in-out"
                 />

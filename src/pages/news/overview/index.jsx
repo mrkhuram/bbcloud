@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import { useNotification } from "../../../constrain/noficationHook";
 import AppLoading from "../../../constrain/AppLoading";
 import { formatDate } from "../../../constrain/dateFormat";
+import { imageBaseURL } from "../../../helpers/utils";
 
 const NewsOverviewPage = () => {
   const { slug } = useParams();
@@ -47,7 +48,7 @@ const NewsOverviewPage = () => {
         <p className="mt-8 mb-8">{news.description}</p>
         <div className="w-1/2">
           <img
-            src={`http://16.171.254.234:5000/uploads/${news.image}`}
+            src={`${imageBaseURL}/${news.image}`}
             alt=""
           />
         </div>

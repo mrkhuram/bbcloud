@@ -52,7 +52,7 @@ function Store() {
                 }}
               >
                 <img
-                  src={`http://16.171.254.234:5000/uploads/${data.product_image}`}
+                  src={`${imageBaseURL}/${data.product_image}`}
                   alt={`Clothing ${index + 1}`}
                   style={{ maxWidth: "60%", height: "auto" }}
                   className="transition-all transform-gpu hover:scale-105 hover:duration-300"
