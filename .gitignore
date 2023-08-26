@@ -9,3 +9,5 @@
 # Dependency directories
 node_modules
 jspm_packages
+# Local Netlify folder
+.netlify

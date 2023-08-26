@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import { useNotification } from "../../constrain/noficationHook";
 import AppLoading from "../../constrain/AppLoading";
 import { formatDate } from "../../constrain/dateFormat";
+import { imageBaseURL } from "../../helpers/utils";
 
 let News = ({ isLandingPage }) => {
   const [news, setNews] = useState(null);
@@ -50,7 +51,7 @@ let News = ({ isLandingPage }) => {
               >
                 <div className="w-full mb-8 md:mb-0">
                   <img
-                    src={`http://16.171.254.234:5000/uploads/${image}`}
+                    src={`${imageBaseURL}/${image}`}
                     alt="album images"
                     className="h-full object-contain lg:object-fill"
                   />

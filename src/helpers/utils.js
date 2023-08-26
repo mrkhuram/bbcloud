@@ -74,4 +74,4 @@ export const errorToast = (str) => {
 };
 
 
-export const imageBaseURL = "http://localhost:5000/uploads"
+export const imageBaseURL = "http://16.171.254.234:5000/uploads"

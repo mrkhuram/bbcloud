@@ -5,6 +5,7 @@ import ReturnHome from "../../../components/ReturnHome";
 import { useNotification } from "../../../constrain/noficationHook";
 import { getItems } from "../../../constrain/helper";
 import AppLoading from "../../../constrain/AppLoading";
+import { imageBaseURL } from "../../../helpers/utils";
 
 const PhotosOverviewPage = () => {
   const { slug } = useParams();
@@ -48,7 +49,7 @@ const PhotosOverviewPage = () => {
               >
                 {/* eslint-disable-next-line  */}
                 <img
-                  src={`http://16.171.254.234:5000/uploads/${photo?.album_image}`}
+                  src={`${imageBaseURL}/${photo?.album_image}`}
                   alt="photo-background"
                 />
               </div>
