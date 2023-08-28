@@ -7,8 +7,11 @@ import {
 } from "react-icons/ai";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+// import musicFile from "../assets/sample-15s.mp3";
 
-const MusicPlay = ({ music }) => {
+
+let musicFile = 'http://16.171.254.234:5000/uploads/1692657668605.mp3'
+const MusicPlay = () => {
   const user = useSelector((state) => state.user.currentUser);
   const [progress, setProgress] = useState(0);
   const [isMusicPlaying, setIsMusicPlaying] = useState(false);
@@ -57,7 +60,7 @@ const MusicPlay = ({ music }) => {
           >
             <AiFillPlayCircle />
           </div>
-          <h2 className="text-3xl px-2 ml-3">{music.title}</h2>
+          <h2 className="text-3xl px-2">Iphone 5 Bgm | ihponr bgm remiz</h2>
         </div>
         <div className="text-3xl cursor-pointer">{<AiOutlineShareAlt />}</div>
       </div>
