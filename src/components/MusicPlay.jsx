@@ -7,9 +7,8 @@ import {
 } from "react-icons/ai";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import musicFile from "../assets/sample-15s.mp3";
 
-const MusicPlay = () => {
+const MusicPlay = ({ music }) => {
   const user = useSelector((state) => state.user.currentUser);
   const [progress, setProgress] = useState(0);
   const [isMusicPlaying, setIsMusicPlaying] = useState(false);
@@ -43,25 +42,29 @@ const MusicPlay = () => {
     setIsMusicPlaying(false);
     setProgress(100);
   };
+
   return (
     <div className="p-4 text-white hover:bg-[#464343] bg-[#727272] transition duration-200 rounded-xl">
       <div className="flex items-start justify-between gap-10">
         <div className="flex">
-          <div className="bg-pink-800 rounded-md p-2 text-5xl">
+          <div
+            className="bg-pink-800 rounded-md w-[7rem] h-[7rem] text-5xl flex items-center justify-center text-black"
+            style={{
+              backgroundImage: `url(http://16.171.254.234:5000/uploads/${music?.music_image})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }}
+          >
             <AiFillPlayCircle />
           </div>
-          <h2 className="text-3xl px-2">Iphone Bgm | ihponr bgm remiz</h2>
+          <h2 className="text-3xl px-2 ml-3">{music.title}</h2>
         </div>
         <div className="text-3xl cursor-pointer">{<AiOutlineShareAlt />}</div>
       </div>
       <div className="text-lg flex gap-6 mt-3">
-        <span>27 Sec</span>
-        <span>
-          <Link to={"/"}>@krishanSingh</Link>
-        </span>
-        <span className="flex items-center gap-1">
-          2232 <AiOutlineCloudDownload />
-        </span>
+        <span>30 Sec</span>
+        <span>{music.releaseDate}</span>
+        <span className="flex items-center gap-1">${music.price} </span>
       </div>
       <div className="flex items-center gap-2">
         <div className=" cursor-pointer hover:text-[#afa6a6]">
@@ -98,10 +101,10 @@ const MusicPlay = () => {
       </div>
       <audio
         ref={audioRef}
-        src={musicFile}
+        src={`http://16.171.254.234:5000/uploads/${music.music_full_file}`}
         onTimeUpdate={handleTimeUpdate}
         onEnded={handleAudioEnd}
-      />{" "}
+      />
     </div>
   );
 };
