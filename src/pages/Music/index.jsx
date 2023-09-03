@@ -33,10 +33,10 @@ let Music = () => {
     if (user) {
       async function fetchMyMusic() {
         try {
-          const response = await getItems(`/api/getprofile/${user._id}`);
+          const response = await getItems(`getprofile/${user._id}`);
           if (response.status === 200) {
             const { data } = response;
-            setMyMusic(data.music);
+            setMyMusic(data.user.myMusic);
           }
         } catch (error) {
           pushNotification(error?.response?.data?.message);
@@ -45,7 +45,7 @@ let Music = () => {
 
       fetchMyMusic();
     }
-  }, [user, pushNotification]);
+  }, [user]);
 
   if (!allMusic)
     return <AppLoading close={closeNotification} notification={notification} />;
@@ -116,7 +116,7 @@ let Music = () => {
                   className="news_list flex flex-col mt-5 justify-between"
                   key={i}
                 >
-                  <MusicPlay music={music} />
+                  <MusicPlay music={music} myMusic={false}/>
                 </div>
               );
             })}
@@ -129,7 +129,7 @@ let Music = () => {
                   className="news_list flex flex-col mt-5 justify-between"
                   key={i}
                 >
-                  <MusicPlay music={music} />
+                  <MusicPlay music={music} myMusic={true}/>
                 </div>
               ))
             ) : (

@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { toast } from 'react-toastify';
 
-export const BASE_URL = process.env.REACT_APP_API_BASE_URL;
+export const BASE_URL = "http://16.171.254.234:5000";
 // export const IMAGE_URL = process.env.REACT_APP_IMAGE_URL;
 
 export const isEmpty = (value) => {
@@ -38,7 +38,7 @@ export const sendRequest = async (url, data) => {
 
     let axios_config = {
         method: method,
-        url: url,
+        url:  url,
         headers: {
             'x-access-token': token,
             ...headers

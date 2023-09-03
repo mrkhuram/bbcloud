@@ -10,8 +10,7 @@ import { Link } from "react-router-dom";
 // import musicFile from "../assets/sample-15s.mp3";
 
 
-let musicFile = 'http://16.171.254.234:5000/uploads/1692657668605.mp3'
-const MusicPlay = () => {
+const MusicPlay = ({ music,myMusic }) => {
   const user = useSelector((state) => state.user.currentUser);
   const [progress, setProgress] = useState(0);
   const [isMusicPlaying, setIsMusicPlaying] = useState(false);
@@ -45,6 +44,7 @@ const MusicPlay = () => {
     setIsMusicPlaying(false);
     setProgress(100);
   };
+  console.log(user)
 
   return (
     <div className="p-4 text-white hover:bg-[#464343] bg-[#727272] transition duration-200 rounded-xl">
@@ -60,12 +60,12 @@ const MusicPlay = () => {
           >
             <AiFillPlayCircle />
           </div>
-          <h2 className="text-3xl px-2">Iphone 5 Bgm | ihponr bgm remiz</h2>
+          <h2 className="text-3xl px-2">{music.title}</h2>
         </div>
         <div className="text-3xl cursor-pointer">{<AiOutlineShareAlt />}</div>
       </div>
       <div className="text-lg flex gap-6 mt-3">
-        <span>30 Sec</span>
+        <span>{!myMusic ? "30 Sec" : "Full Song"}</span>
         <span>{music.releaseDate}</span>
         <span className="flex items-center gap-1">${music.price} </span>
       </div>
@@ -90,7 +90,7 @@ const MusicPlay = () => {
         <Link
           to={
             user
-              ? "/http://localhost:5000/api/music/buy/64e3e81e8a2c5d50d638c5de/64ea04cd54e3850b9cab79e5"
+              ? `http://16.171.254.234:5000/api/music/buy/${music._id}/${user._id}`
               : "/login"
           }
           type="button"
@@ -104,7 +104,7 @@ const MusicPlay = () => {
       </div>
       <audio
         ref={audioRef}
-        src={`http://16.171.254.234:5000/uploads/${music.music_full_file}`}
+        src={`http://16.171.254.234:5000/uploads/${myMusic ? music.music_full_file : music.music_short_file}`}
         onTimeUpdate={handleTimeUpdate}
         onEnded={handleAudioEnd}
       />
