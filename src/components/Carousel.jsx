@@ -14,12 +14,12 @@ const CarouselComp = () => {
     >
       <div>
         <Link to="/store">
-          <img src={appImages.cover[0]} className="h-[90vh]" alt="carousel 1" />
+          <img src={appImages.cover[0]} className="h-[50vh] sm:h-[90vh]" alt="carousel 1" />
         </Link>
       </div>
       <div>
         <Link to="/store">
-          <img src={appImages.cover[1]} className="h-[90vh]" alt="carousel 2" />
+          <img src={appImages.cover[1]} className="h-[50vh] sm:h-[90vh]" alt="carousel 2" />
         </Link>
       </div>
     </Carousel>

@@ -36,6 +36,7 @@ let Music = () => {
           const response = await getItems(`getprofile/${user._id}`);
           if (response.status === 200) {
             const { data } = response;
+            console.log(data.user)
             setMyMusic(data.user.myMusic);
           }
         } catch (error) {
@@ -129,7 +130,7 @@ let Music = () => {
                   className="news_list flex flex-col mt-5 justify-between"
                   key={i}
                 >
-                  <MusicPlay music={music} myMusic={true}/>
+                  <MusicPlay music={music.music_item} myMusic={true}/>
                 </div>
               ))
             ) : (
