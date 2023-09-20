@@ -1,4 +1,5 @@
 import React, { useState, useRef } from "react";
+import { useEffect } from "react";
 import {
   AiFillPlayCircle,
   AiOutlineShareAlt,
@@ -7,15 +8,19 @@ import {
 } from "react-icons/ai";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-// import musicFile from "../assets/sample-15s.mp3";
 
-
-const MusicPlay = ({ music,myMusic }) => {
+const MusicPlay = ({ music, myMusic }) => {
   const user = useSelector((state) => state.user.currentUser);
   const [progress, setProgress] = useState(0);
   const [isMusicPlaying, setIsMusicPlaying] = useState(false);
   const audioRef = useRef(null);
   const [isAudioEnded, setIsAudioEnded] = useState(false);
+
+  useEffect(() => {
+    setProgress(0);
+    setIsMusicPlaying(false);
+    setIsAudioEnded(false);
+  }, [myMusic]);
 
   const handleTimeUpdate = () => {
     const currentTime = audioRef.current.currentTime;
@@ -44,8 +49,6 @@ const MusicPlay = ({ music,myMusic }) => {
     setIsMusicPlaying(false);
     setProgress(100);
   };
-
-  console.log(music)
 
   return (
     <div className="p-4 text-white hover:bg-[#464343] bg-[#727272] transition duration-200 rounded-xl">
@@ -91,12 +94,13 @@ const MusicPlay = ({ music,myMusic }) => {
         <Link
           to={
             user
-              ? `http://localhost:5000/api/music/buy/${music._id}/${user._id}`
+              ? `http://16.171.254.234:5000/api/music/buy/${music._id}/${user._id}`
               : "/login"
           }
           type="button"
           className="text-white bg-[#2f2a2a] font-medium rounded-lg text-sm px-5 py-2.5"
-          target="_blank" rel="bobbybbc"
+          target="_blank"
+          rel="bobbybbc"
         >
           Buy now
         </Link>
@@ -106,7 +110,9 @@ const MusicPlay = ({ music,myMusic }) => {
       </div>
       <audio
         ref={audioRef}
-        src={`http://16.171.254.234:5000/uploads/${myMusic ? music.music_full_file : music.music_short_file}`}
+        src={`http://16.171.254.234:5000/uploads/${
+          myMusic ? music.music_full_file : music.music_short_file
+        }`}
         onTimeUpdate={handleTimeUpdate}
         onEnded={handleAudioEnd}
       />

@@ -4,7 +4,7 @@ const sendRequest = async (method, url, dataObj) => {
   try {
     const response = await axios({
       method,
-      url: `/api/${url}`,
+      url: `http://162.240.149.96:5000/api/${url}`,
       data: dataObj,
     });
 
